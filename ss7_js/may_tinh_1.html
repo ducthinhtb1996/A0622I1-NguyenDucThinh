@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo máy tính</title>
+</head>
+<body>
+    <style>
+        #result {
+            width: 600px;
+            height: 30px;
+            border: 2px solid gray;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            text-align: right;
+            padding-right: 10px;
+            font-weight: bold;
+        }
+        #keyboard {
+            width: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+        button {
+            width: 146px;
+            height: 50px;
+            margin: 2px;
+            font-weight: bold;
+        }
+        button:hover {
+            cursor: pointer;
+            background-color: gainsboro;
+        }
+        .bg-color{
+            background-color: springgreen;
+        }
+        .bg-gray {
+            background-color: #cac5c5;
+        }
+    </style>
+    <div id="result">0</div>
+    <div id="keyboard">
+        <button type="button" onclick="click_key('(')" class="bg-gray">(</button>
+        <button type="button" onclick="click_key(')')" class="bg-gray">)</button>
+        <button type="button" onclick="click_key('%')" class="bg-gray">%</button>
+        <button type="button" onclick="click_key('AC')" class="bg-gray">AC</button>
+        <button type="button" onclick="click_key('7')">7</button>
+        <button type="button" onclick="click_key('8')">8</button>
+        <button type="button" onclick="click_key('9')">9</button>
+        <button type="button" onclick="click_key('/')" class="bg-gray">:</button>
+        <button type="button" onclick="click_key('4')">4</button>
+        <button type="button" onclick="click_key('5')">5</button>
+        <button type="button" onclick="click_key('6')">6</button>
+        <button type="button" onclick="click_key('*')" class="bg-gray">x</button>
+        <button type="button" onclick="click_key('1')">1</button>
+        <button type="button" onclick="click_key('2')">2</button>
+        <button type="button" onclick="click_key('3')">3</button>
+        <button type="button" onclick="click_key('-')" class="bg-gray">-</button>
+        <button type="button" onclick="click_key('0')">0</button>
+        <button type="button" onclick="click_key('.')">.</button>
+        <button type="button" class="bg-color" onclick="click_key('=')">=</button>
+        <button type="button" onclick="click_key('+')" class="bg-gray">+</button>
+    </div>
+
+    <script>
+        let a = "";
+        function click_key (param_key) {
+            if (param_key !== '=') {
+                a = a + param_key;
+                let result_param ;
+                document.getElementById("result").innerHTML = a;
+            }
+            if (param_key == 'AC') {
+                a = 0;
+                document.getElementById("result").innerHTML = a;
+            }
+            if (param_key === '=') {
+               result_param = eval(a) ;
+               console.log(result_param);
+               document.getElementById("result").innerHTML = result_param;
+               a = "";
+            }
+        }
+    </script>
+</body>
+</html>

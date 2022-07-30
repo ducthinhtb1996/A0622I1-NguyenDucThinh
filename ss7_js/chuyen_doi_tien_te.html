@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <form>
+        <label>Amount</label><br>
+        <input type="number" name = 'quantity' id = 'quantity'><br><br>
+        <label>Form currency</label><br>
+        <select onchange="form_current()" id="tien_goc">
+            <option value="0">Chọn loại tiền</option>
+            <option value="1">Việt Nam</option>
+            <option value="2">Đô</option>
+            <option value="3">Bảng anh</option>
+        </select><br><br>
+        <label>To currency</label><br>
+        <select onchange="to_current()" id="tien_doi">
+            <option value="0">Chọn loại tiền</option>
+            <option value="1">Việt Nam</option>
+            <option value="2">Đô</option>
+            <option value="3">Bảng anh</option>
+        </select><br><br>
+        <button type="button" onclick="convert()">Convert</button>
+    </form>
+    <h1>Result: <span id="result"></span></h1>
+
+    <script>
+        function form_current() {
+            let a = document.getElementById("tien_goc");
+            let b = a.options[a.selectedIndex].text;
+        }
+        function to_current() {
+            let c = document.getElementById("tien_doi");
+            let d = c.options[c.selectedIndex].text;
+        }
+
+    </script>
+</body>
+</html>

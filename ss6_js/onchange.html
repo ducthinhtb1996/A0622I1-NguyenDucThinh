@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện Onchage</title>
+</head>
+<body>
+<h1>Tạo sự kiện Onchage</h1>
+<h2>Option value: <span id="my_selected"></span></h2>
+<label>Sản phẩm:</label>
+<select id="my_select" onchange="change_option()">
+    <option value="0">Nguyễn Đức Thịnh</option>
+    <option value="1">Nguyễn Văn A</option>
+    <option value="1">Nguyễn Văn B</option>
+    <option value="1">Nguyễn Văn C</option>
+    <option value="1">Nguyễn Văn D</option>
+</select><br><br>
+
+<input type="number" name="product_quantity" id="product_quantity"><br><br>
+<input type="number" name="price" id="product_price"><br><br>
+<button type="button" onclick="tinh_gia()">Tính giá</button>
+
+<script>
+    function change_option() {
+           let a = document.getElementById("my_select");
+           let b = a.options[a.selectedIndex].text;
+           document.getElementById("my_selected").innerHTML = b;
+    }
+    function tinh_gia() {
+          let price = document.getElementById("product_price").value;
+          let quantity = document.getElementById("product_quantity").value;
+          alert("Số tiền cần thanh toán:" + " " + price*quantity);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành khai báo và sử dụng biến</title>
+</head>
+<body>
+    <h1>Bài 1 : Viết chương trình nhập điểm của một sinh viên cho các môn</h1>
+    <h1>Điểm trung bình của thí sinh <span id="ten_thi_sinh"></span> : <span id="diem_trung_binh"> </span></h1>
+    <h2>Học lực: <span id="hoc_luc"></span></h2>
+    <script>
+      let student_name = prompt("Nhập tên thí sinh")
+      let vat_ly = parseInt(prompt("Nhập điểm môn vật lý"));
+      let hoa_hoc = parseInt(prompt("Nhập điểm môn hóa học"));
+      let sinh_hoc = parseInt(prompt("Nhập điểm môn Sinh học"));
+      let diem_trung_binh = (vat_ly + hoa_hoc + sinh_hoc) / 3;
+      confirm("Sau khi tính tổng, dữ liệu sẽ không được thay đổi. Nhấn OK nếu không có vấn đề gì xảy ra.");
+      document.getElementById("ten_thi_sinh").innerHTML = student_name;
+      document.getElementById("diem_trung_binh").innerHTML = diem_trung_binh;
+      if (diem_trung_binh<5) {
+          document.getElementById("hoc_luc").innerText = "Kém";
+      } else if (diem_trung_binh>=5 && diem_trung_binh<8) {
+          document.getElementById("hoc_luc").innerText = "Trung bình";
+      } else if (diem_trung_binh>=8 && diem_trung_binh<9) {
+          document.getElementById("hoc_luc").innerText = "Khá";
+      } else if (diem_trung_binh >=9 && diem_trung_binh<=10) {
+          document.getElementById("hoc_luc").innerText = "Giỏi";
+      } else {
+          alert("Dữ liệu đầu vào sai. Vui lòng kiểm tra và thao tác lại.");
+      }
+    </script>
+
+</body>
+</html>

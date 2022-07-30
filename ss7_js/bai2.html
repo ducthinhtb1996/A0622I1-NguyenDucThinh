@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Viết chương trình tính diện tích hình tròn </title>
+</head>
+<body>
+    <h1>Diện tích hình tròn <span id="dien_tich"></span></h1>
+
+    <script>
+        let r = parseInt(prompt("Nhập bán kính đường tròn"));
+        let s = r**2 * 3.14;
+        document.getElementById("dien_tich").innerHTML = s;
+    </script>
+</body>
+</html>

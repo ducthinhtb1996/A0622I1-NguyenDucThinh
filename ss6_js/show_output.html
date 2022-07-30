@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành hiển thị đầu ra</title>
+</head>
+<body>
+<!--Bài tập 1: Hiển thị kết quả sử dụng hàm alert():-->
+<h1>Bài tập 1: Hiển thị kết quả sử dụng hàm alert():</h1>
+<button type="button" onclick="showMessage()">Click Me</button>
+
+<!--Bài tập 2: Hiển thị kết quả sử dụng thẻ HTML:-->
+<h1>Bài tập 2: Hiển thị kết quả sử dụng thẻ HTML:</h1>
+<h3>Họ và tên: <span id="showName"></span></h3>
+<button type="button" onclick="getName()">Heo mi</button>
+
+<!--Bài tập 3: Hiển thị kết quả sử dụng hàm document.write():-->
+<h1>Bài tập 3: Hiển thị kết quả sử dụng hàm document.write():</h1>
+<button type="button" onclick=""></button>
+<script>
+    function showMessage() {
+        alert("Xin chào, mình là Nguyễn Đức Thịnh");
+    }
+    function getName() {
+        let fullName = "Nguyễn Đức Thịnh";
+        document.getElementById('showName').innerHTML = fullName;
+    }
+</script>
+</body>
+</html>

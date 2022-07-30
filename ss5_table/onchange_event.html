@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự Kiện Onchage</title>
+    <script src="event.js"></script>
+</head>
+<body>
+<h2>Sự kiện OnChange</h2>
+<h2>Giá trị get được khi select value: <span id="selectedValue"></span></h2>
+<select id="mySelect" onchange="selectValue()">
+    <option value="0">Nguyễn Đức Thịnh</option>
+    <option value="1">Nguyễn Đức Thịnh 1996</option>
+    <option value="2">Nguyễn Đức Thịnh 2022</option>
+    <option value="3">Nguyễn Đức Thịnh 16.02.1996</option>
+</select><br><br>
+<Label>Số lượng:</Label><br>
+<input type="number" name = "product_quantity" max="100" id="product_quantity"><br><br>
+<label>Tỷ giá: </label><br>
+<input type="text" name="exchangeRate" id="exchangeRate"><br><br>
+<button type="submit" style="padding: 10px; font-weight: bold") onclick = "total()">Tính tiền</button><br><br>
+<script>
+    function total() {
+        var b = document.getElementById("product_quantity").value;
+        var c = document.getElementById("exchangeRate").value;
+        var d = b*c;
+        document.getElementById("selectedValue").innerHTML = d;
+    }
+    function showEmail() {
+        var getEmail = document.getElementById("email").value;
+        document.getElementById("yourEmail").innerHTML = getEmail;
+    }
+    function thinh() {
+        var firstName = "Nguyễn Đức", lastName="Thịnh", fullName=firstName+ " " +lastName;
+        document.getElementById("f").innerHTML = fullName;
+    }
+    function changeSetting() {
+        var getValue = document.getElementById("selectSetting");
+        var textValue = getValue.options[getValue.seletctedIndex].text;
+        alert(textValue);
+    }
+    let my_array = ['NGUYEN DUC THINH', 'TRAN THU SUONG', 'NGUYEN NHAT LINH'];
+    let person = {
+      'fullName' : "NGUYEN DUC THINH",
+        'age' : 27,
+        'gender' : 'male'
+    };
+    console.log(my_array);
+    console.log(person);
+</script>
+<h2>Email của bạn là: <span id="yourEmail"></span></h2>
+<input type="email" name="email" id="email"><br><br>
+<button type="submit" onclick = "showEmail()">Gửi</button>
+<button type="reset">Reset</button><br><br>
+<h1>Sở thích đã chọn: <span id="f"></span></h1>
+<button type="submit" onclick="thinh()">Click</button><br><br>
+<select id="selectSetting" onchange="changeSetting()">
+    <option vlaue="0">Tắt báo thức</option>
+    <option vlaue="1">Tắt chuông</option>
+    <option vlaue="2">Tắt thông báo</option>
+    <option vlaue="3">Tắt nguồn</option>
+</select>
+ </body>
+</html>
