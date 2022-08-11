@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 02</title>
+</head>
+<body>
+<h1>Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được</h1>
+<h2>Diện tích hình tròn là : <span id = "area"></span></h2>
+<h2>Chu vi hình tròn là : <span id = "perimeter"></span></h2>
+<script>
+    function result_area(r) {
+        document.getElementById("area").innerHTML = 2*(r**2)*3.14;
+    }
+    function result_perimeter(d) {
+        document.getElementById("perimeter").innerHTML = 2*3.14*d;
+    }
+    result_area(2);
+    result_perimeter(3);
+</script>
+</body>
+</html>

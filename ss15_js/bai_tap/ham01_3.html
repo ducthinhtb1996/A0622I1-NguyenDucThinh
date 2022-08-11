@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 01</title>
+</head>
+<body>
+<h1>Bài 3: Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn
+    tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ
+    hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.</h1>
+<script>
+    let total = 0;
+    let a = +prompt("Nhập số a :");
+    let b = +prompt("Nhập số b :");
+    function showResult(a,b) {
+            if (a>b) {
+                alert("Số " + a +" lớn hơn " + b);
+            } else {
+                total = a+b;
+                alert(total);
+            }
+    }
+    showResult(a,b);
+</script>
+</body>
+</html>

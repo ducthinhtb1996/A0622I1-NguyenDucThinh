@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 01</title>
+</head>
+<body>
+<script>
+    let listValue = prompt("Nhập tên sao:");
+        let listStar = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let listConstellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    function searchStar(listValue) {
+        let index = -1;
+        for (let i=0; i<listStar.length; i++) {
+            if (listStar[i] == listValue) {
+                index = i;
+            }
+        }
+        if (index!=-1) {
+            alert(listConstellation[index]);
+        } else {
+            alert("Sai rồi");
+        }
+    }
+    searchStar(listValue);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+    <input type="text" id="value_a">
+    <button type="button" onclick="changeMeters()">Change Meter</button>
+    <button type="button" onclick="changeFeet()">Change Feet</button>
+    <script>
+        function changeMeters(feet_value) {
+            feet_value = document.getElementById("value_a").value;
+            alert(feet_value*0.305);
+        }
+        function changeFeet(meters_value) {
+            meters_value = document.getElementById("value_a").value;
+            alert(meters_value*3.279);
+        }
+    </script>
+</body>
+</html>
