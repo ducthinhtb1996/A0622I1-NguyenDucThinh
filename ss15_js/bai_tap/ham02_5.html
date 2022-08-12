@@ -10,11 +10,20 @@
     let a = +prompt("Nhập số a:");
     let b = +prompt("Nhập số b:");
     let c = +prompt("Nhập số c:");
+    let min = a;
     function checkNum() {
-        if () {
-
+        if (min>b) {
+            min = b;
+        } else if (min>c) {
+            min = c;
+        } else  if (b<c) {
+            min = b;
+        } else if (c<b) {
+            min = c;
         }
+        alert(min);
     }
+    checkNum();
 </script>
 </body>
 </html>

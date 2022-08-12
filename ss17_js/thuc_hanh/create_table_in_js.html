@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Xây dựng lớp Date</title>
+</head>
+<body>
+<h1>[Thực hành] Xây dựng lớp Date</h1>
+<p id="showTable"></p>
+<script>
+    let myTable = '<table border="1">';
+    for (let i = 0; i <5 ; i++) {
+        myTable+='<tr>';
+        for (let j = 0; j <5 ; j++) {
+            myTable+='<td style="width: 100px; height: 50px"></td>';
+        }
+        myTable+='</tr>';
+    }
+    myTable+='</table>';
+document.getElementById("showTable").innerHTML = myTable;
+</script>
+</body>
+</html>
