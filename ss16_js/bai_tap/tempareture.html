@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    let c = +prompt("Nhập nhiệt độ");
+    class Tempareture {
+        constructor(c) {
+            this.c = c;
+        }
+        changeF (c) {
+            if (c<-273) {
+                alert("Nhiệt độ nhỏ nhất là -273 độ");
+            } else {
+                return c*1.8+32;
+            }
+        }
+        changeKenvin(c) {
+            if (c<-273) {
+                alert("Nhiệt độ nhỏ nhất là -273 độ");
+            } else {
+                return c+273.5;
+            }
+        }
+    }
+    let changeValue = new Tempareture(c);
+    console.log(changeValue.changeF(c));
+    console.log(changeValue.changeKenvin(c));
+// function Temperature(c) {
+//     this.c = c;
+//     this.getF = function () {
+//         if (c<-273) {
+//             alert("Nhiệt độ nhỏ nhất có thể chuyển đổi là -273 độ");
+//             return ;
+//         } else {
+//             return c*1.8+32;
+//         }
+//     }
+//     this.getKenvin = function () {
+//         if (c<-273) {
+//             alert("Nhiệt độ nhỏ nhất có thể chuyển đổi là -273 độ");
+//             return ;
+//         } else {
+//             return c+237.5;
+//         }
+//     }
+// }
+// let changeC = new Temperature(c);
+// console.log(changeC.getF());
+// console.log(changeC.getKenvin());
+</script>
+</body>
+</html>
