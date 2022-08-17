@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Luyện tập mảng 01 - Bài 2</title>
 </head>
 <body>
-$END$
+<script>
+    let myArray = [11,12,8,9,7,22,100,50,2,4,3,5,6,200];
+    let max_num = 0;
+    let index_max = 0;
+    for (let i = 0;i<myArray.length;i++) {
+        if (max_num<myArray[i]) {
+            max_num = myArray[i];
+            index_max = i;
+        }
+    }
+    alert(max_num + ' vị trí : ' + index_max);
+</script>
 </body>
 </html>

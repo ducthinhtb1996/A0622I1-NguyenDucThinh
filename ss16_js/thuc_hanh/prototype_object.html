@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Prototype</title>
+</head>
+<body>
+<script>
+  function User(firstName,lastName, age, address) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.age = age;
+      this.address = address;
+      this.getName = function () {
+            return `${this.firstName} ${this.lastName}`;
+      }
+  }
+  User.prototype.email = 'ducthinhtb1996@gmail.com';
+  let user1 = new User('Nguyễn Đức', 'Thịnh', 27, 'Thái Bình');
+  let user2 = new User('Trần Thị', 'Thu Sương', 30, 'Thái Bình');
+  console.log(user1.getName());
+</script>
+</body>
+</html>

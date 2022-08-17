@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Luyện tập mảng 01</title>
 </head>
 <body>
-$END$
+<script>
+    let myArray = [1,2,3,4,5,6,7,8,9,10];
+    let index_num = -1;
+    let input_num = +prompt("Nhập số cần xóa:")
+    for (let i=0; i<myArray.length; i++) {
+        if (myArray[i]===input_num) {
+           index_num = i;
+        }
+    }
+    if (index_num !=-1) {
+        myArray.splice(index_num,1);
+        myArray.push(0);
+    }
+    console.log(myArray);
+</script>
 </body>
 </html>

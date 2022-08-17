@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Luyện tập mảng 02</title>
 </head>
 <body>
-$END$
+<h3>Viết một chương trình để đếm số từ trong một chuỗi</h3>
+<script>
+    let name = prompt("Nhập tên:");
+    let myArray = [];
+    let count = 1;
+    for (let i = 0; i <name.length; i++) {
+        myArray[i] = name.charAt(i);
+    }
+    for (let i = 0; i <myArray.length ; i++) {
+        if (myArray[i]== " " && myArray[i+1] != " ") {
+            count++;
+        }
+    }
+    console.log(count);
+</script>
 </body>
 </html>

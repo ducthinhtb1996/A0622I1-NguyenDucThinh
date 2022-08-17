@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tìm giá trị trong mảng</title>
 </head>
 <body>
-$END$
+<script>
+    let myArray = ['Nguyễn', 'Đức', 'Thịnh'];
+    let search_value = prompt("Nhập tên bạn muốn tìm");
+    for (let i=0;i<myArray.length;i++) {
+         if (search_value == myArray[i]) {
+             document.write(search_value);
+         } else {
+             alert("Giá trị không tồn tại");
+         }
+    }
+</script>
 </body>
 </html>

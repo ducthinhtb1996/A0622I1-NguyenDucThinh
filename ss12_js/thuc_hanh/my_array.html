@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Array</title>
 </head>
 <body>
-$END$
+<input type="text" id="user">
+<button type="button" onclick="add_user()">Add</button>
+<button type="button" onclick="display_user()">Display</button>
+ <script>
+     let list_user = [
+         'A','B','C'
+     ]
+     function add_user() {
+         let add_user = document.getElementById("user").value;
+         list_user.push(add_user);
+     }
+     function display_user() {
+         for (let i=0; i<list_user.length;i++) {
+             document.write(list_user[i] + '<br>');
+         }
+     }
+ </script>
 </body>
 </html>

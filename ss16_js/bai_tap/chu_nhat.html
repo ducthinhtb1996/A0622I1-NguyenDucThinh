@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<h1>Diện tích hình chữ nhật là : <span id = "rectangle_area"></span></h1>
+<h1>Chu vi hình chữ nhật là : <span id="retangle_perimeter"></span></h1>
+<script>
+    function Rectangle(height,width) {
+        this.longs = height;
+        this.width = width;
+        this.area = function () {
+            return height*width;
+        }
+        this.perimeter = function () {
+            return 2*(height + width);
+        }
+    }
+    let rectangle_value = new Rectangle(4,5);
+    document.getElementById("rectangle_area").innerHTML = rectangle_value.area();
+    document.getElementById("retangle_perimeter").innerHTML = rectangle_value.perimeter();
+</script>
+</body>
+</html>

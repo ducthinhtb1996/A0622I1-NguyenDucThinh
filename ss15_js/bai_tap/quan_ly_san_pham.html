@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+</head>
+<body>
+<style>
+    #show_quantity {
+        margin-left: 315px;
+        font-weight: bold;
+        font-size: 25px;
+    }
+</style>
+<input type="text" id = "add_product" placeholder="New Product">
+<button type="button" onclick="addProduct()">Add</button><br><br>
+<span>Product Quantity : </span>
+<span id = "show_quantity"></span>
+<p id="product_table"></p>
+<script>
+    let list_product = ['Sản phẩm 1', 'Sản phẩm 2', 'Sản phẩm 3'];
+    document.getElementById("show_quantity").innerHTML = list_product.length;
+    create_table();
+    function addProduct() {
+        let product_name = document.getElementById("add_product").value;
+        if (product_name.length >= 1 && product_name.length<=20 ) {
+            let confirm_add = confirm("Bạn có muốn thêm sản phẩm " + product_name);
+            if (confirm_add ==  true) {
+                for (let i = 0; i <list_product.length ; i++) {
+                    if (list_product[i] == product_name) {
+                        alert("Sản phẩm đã tồn tại");
+                        document.getElementById("add_product").value = '';
+                        return;
+                    }
+                }
+                        list_product.push(product_name);
+                        document.getElementById("show_quantity").innerHTML = list_product.length;
+                create_table();
+            }
+        } else {
+            alert("Nhập tên sản phẩm từ 1-20 ký tự");
+            document.getElementById("add_product").value = '';
+        }
+    }
+    function create_table() {
+        let myTable = '<table>';
+        for (let i = 0; i <list_product.length ; i++) {
+            myTable+='<tr>';
+            myTable+='<td style="width: 300px; height: 50px">'+ list_product[i] + '</td>';
+            myTable+='<td style="width: 100px; height: 50px">'+ '<button type="button" onclick="edit_product('+i+')">Edit</button>' + '</td>';
+            myTable+='<td style="width: 100px; height: 50px">'+ '<button type="button" onclick="delete_product('+i+') ">Delete</button>' + '</td>';
+            myTable+='</tr>';
+        }
+        document.getElementById("product_table").innerHTML = myTable;
+    }
+    function edit_product(param) {
+            let edit_value = prompt("Nhập tên sản phẩm mới",list_product[param]);
+            list_product[param] = edit_value;
+            create_table();
+    }
+    function delete_product(param) {
+        confirm("Mày thực sự muốn xóa " + list_product[param]);
+            list_product.splice(param,1);
+            document.getElementById("show_quantity").innerHTML = list_product.length;
+            create_table();
+    }
+</script>
+</body>
+</html>

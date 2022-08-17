@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Luyện tập mảng 01</title>
 </head>
 <body>
-$END$
+<script>
+    let myArray = [1,2,3,4,-1,-2,-3,-4,-5,100];
+    let list_num = [];
+    for (let i = 0;i<myArray.length;i++) {
+        if (myArray[i]<0) list_num.push(myArray[i]);
+    }
+    document.write(list_num + '<br>');
+    document.write('Các số nguyên âm tổng cộng có ' + list_num.length + ' số');
+</script>
 </body>
 </html>

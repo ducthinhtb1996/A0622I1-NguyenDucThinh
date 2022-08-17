@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Nhiệt độ</title>
 </head>
 <body>
-$END$
+    <script>
+        let nhiet_do = null;
+        do {
+            nhiet_do = prompt("Nhập nhiệt độ của bạn :");
+            if (nhiet_do<20) {
+                alert('Lạnh quá');
+            } else if (nhiet_do>100) {
+                alert('Nóng quá');
+            }
+            alert("Nhiệt độ bạn nhật là " + nhiet_do);
+        } while (nhiet_do<20 || nhiet_do >100);
+    </script>
 </body>
 </html>

@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Luyện tập mảng 02</title>
 </head>
 <body>
-$END$
+<h3> Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng. </h3>
+<script>
+    let myArray = ['a', 'b', 'c', 1,2,3,4,5];
+    let count = 0;
+    for (let i=0;i<myArray.length;i++) {
+        if (typeof myArray[i] === "number") {
+            count++;
+        }
+    }
+    document.write(count);
+</script>
 </body>
 </html>

@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Luyện tập mảng 01-03</title>
 </head>
 <body>
-$END$
+<script>
+    let myArray = [11,12,8,9,7,22,100,50,2,4,3,5,6,200];
+    let max_num = 0;
+    let total = 0;
+    // for (let value of myArray) {
+    //     if (value>max_num) {
+    //         max_num = value;
+    //     }
+    // }
+    // for (let i=0; i<myArray.length;i++) {
+    //     total += myArray[i];
+    // }
+    // alert('Số lớn nhât là ' + max_num +' và giá trị trung bình của các số trong mảng là '+ total/myArray.length);
+    for (let i=0;i<myArray.length;i++) {
+        if (max_num<myArray[i]) max_num = myArray[i];
+        // for (let j=0;j<myArray.length;j++) {
+            total +=myArray[i];
+        // }
+    }
+    alert('Số lớn nhât là ' + max_num +' và giá trị trung bình của các số trong mảng là '+ (total/myArray.length));
+</script>
 </body>
 </html>

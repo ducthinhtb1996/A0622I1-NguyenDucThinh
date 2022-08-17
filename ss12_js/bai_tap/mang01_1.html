@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Luyện tập mảng 01</title>
 </head>
 <body>
-$END$
+<script>
+    let myArray = [11,12,8,9,7,22,100,50,2,4,3,5,6,200];
+    let list_number = [];
+    for (let value of myArray) {
+        if (value>=10) {
+            list_number.push(value);
+        }
+    }
+    alert("Các số nguyên lớn hơn hoặc bằng 10 gồm : " + list_number.length + ' số');
+</script>
 </body>
 </html>
+
+

@@ -2,9 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Từ điển</title>
 </head>
 <body>
-$END$
+<input type="text" id ="dictionary">
+<button type="button" onclick="translate()">Translate</button>
+<script>
+    let english_store = ['name', 'where', 'age', 'address', 'number'];
+    let vietnamese_store = ['tên', 'Ở đâu', 'tuổi', 'địa chỉ', 'số'];
+    let index_text = null;
+    // CÁCH 1
+    // let index = -1;
+    // function translate() {
+    //     let input_text = document.getElementById("dictionary").value;
+    //     for (let i = 0; i < english_store.length; i++) {
+    //         if (input_text == english_store[i]) index = i;
+    //     }
+    //     if (index !=-1) {
+    //         alert(vietnamese_store[index]);
+    //     }
+    // }
+
+    //    CÁCH 2
+    function translate() {
+        let input_text = document.getElementById("dictionary").value;
+        for (let i = 0; i < english_store.length; i++) {
+            if (input_text == english_store[i]) {
+                input_text = i;
+            } else {
+                input_text = -1;
+            }
+        }
+        alert(vietnamese_store[input_text]);
+    }
+    console.log(index_text);
+</script>
 </body>
 </html>

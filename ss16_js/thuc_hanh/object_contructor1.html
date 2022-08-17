@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object constructor</title>
+</head>
+<body>
+<script>
+   function Lop12a7(studentName, studentAge, studentAddress) {
+        this.studentName = studentName;
+        this.studentAge = studentAge;
+        this.studentAddress = studentAddress;
+        this.getInfo = function () {
+            return `${this.studentName} ${this.studentAge} ${'Tuổi'}`;
+        }
+   }
+
+   let student1 = new Lop12a7 ('Nguyễn Đức Thịnh', 27, 'Thái Bình');
+   student1.title = 'Đây là title';
+   console.log('Học sinh cần tìm là: ' + student1.getInfo());
+</script>
+</body>
+</html>

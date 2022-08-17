@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object constructor</title>
+</head>
+<body>
+<script>
+  function Family(father, mother, child) {
+        this.father = father;
+        this.mother = mother;
+        this.child = child;
+        this.getFather = function () {
+            return `${this.father}`;
+        }
+  }
+  let myFamily = new Family('Nguyễn Đức Thịnh', 'Trần Thị Thu Sương', 'Nguyễn Nhật Linh & Nguyễn Nhật Long');
+  myFamily.title = 'Chúng tôi là một gia đình hạnh phúc';
+  console.log(myFamily);
+</script>
+</body>
+</html>

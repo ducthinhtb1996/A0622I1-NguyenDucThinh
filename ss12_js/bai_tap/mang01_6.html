@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Luyện tập mảng 01</title>
 </head>
 <body>
-$END$
+<input type="text" id="input_text">
+<button type="button" onclick="check_value()">Check Value</button>
+<script>
+    let myArray = ['Nguyễn', 'Đức', 'Thịnh'];
+    function check_value() {
+        let text_value = document.getElementById('input_text').value;
+        let index_a = -1;
+        for (let i = 0; i < myArray.length; i++) {
+            if (myArray[i] === text_value) {
+                index_a = i;
+            }
+        }
+        if (index_a !=-1) {
+            alert("OK");
+        } else {
+            alert("NOT GOOD");
+        }
+
+    }
+</script>
 </body>
 </html>

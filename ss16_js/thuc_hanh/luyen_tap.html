@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập</title>
+</head>
+<body>
+<script>
+    let user = {
+        name : 'Nguyễn Đức Thịnh',
+        age : 27,
+        address : 'Thái Bình'
+    };
+    // for (let value of Object.keys(user)) {
+    //     console.log(user[value]);
+    // }
+    function checkValue(a) {
+        for (let value of Object.values(user)) {
+            if (value == a) {
+                return value;
+            }
+        }
+        if (value==a) {
+            alert("OK");
+        } else {
+            alert("NOT OK");
+        }
+    }
+    console.log(checkValue('Thái Bình');)
+</script>
+</body>
+</html>

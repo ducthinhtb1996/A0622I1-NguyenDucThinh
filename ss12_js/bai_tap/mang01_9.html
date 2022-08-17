@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Luyện tập mảng 01</title>
 </head>
 <body>
-$END$
+<h3>Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.</h3>
+<script>
+    let arrA = [1,2,4,5,6,7,6,0];
+    let arrB = [0,9,88,77,66,55];
+    let arrC = [888,999,555];
+    let index = -1;
+    for (let i = 0; i <arrA.length ; i++) {
+        for (let j = 0; j <arrB.length ; j++) {
+            if (arrA[i] === arrB[j]) {
+                index=i;
+                arrA.splice(index,1);
+            }
+        }
+    }
+    document.write(arrC.concat(arrA.concat(arrB)));
+</script>
 </body>
 </html>

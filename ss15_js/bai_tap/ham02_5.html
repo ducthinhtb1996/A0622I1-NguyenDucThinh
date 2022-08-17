@@ -7,11 +7,12 @@
 <body>
 <h1>Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.</h1>
 <script>
-    let a = +prompt("Nhập số a:");
-    let b = +prompt("Nhập số b:");
-    let c = +prompt("Nhập số c:");
-    let min = a;
-    function checkNum() {
+    // let a = +prompt("Nhập số a:");
+    // let b = +prompt("Nhập số b:");
+    // let c = +prompt("Nhập số c:");
+    // let min = a;
+    let minNum ;
+    function checkNum(myArray) {
         if (min>b) {
             min = b;
         } else if (min>c) {
@@ -22,8 +23,9 @@
             min = c;
         }
         alert(min);
+        
     }
-    checkNum();
+    console.log(checkNum([2,4,5,1]));
 </script>
 </body>
 </html>

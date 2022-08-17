@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tìm giá trị lớn nhất trong mảng</title>
 </head>
 <body>
-$END$
+<script>
+    let list_number = [2,3,4,10,50,1000,1,8,200,400];
+    let max = list_number[0];
+    for (let i =1; i<list_number.length;i++) {
+        if (list_number[i] > max) {
+            max = list_number[i];
+            alert(max);
+        }
+    }
+</script>
 </body>
 </html>
